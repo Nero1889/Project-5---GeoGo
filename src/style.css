@@ -9,6 +9,9 @@
     --bg-clr: white;
     --txt: #475569;
     --txt-hvr: black;
+    --crd-brdr: rgba(0, 0, 0, 0.096);
+    --crd-upr-fde: #edecf2ca;
+    --crd-btm-fde: white;
 
     /* Sizes */
     --size-xss: 0.5rem;
@@ -34,6 +37,9 @@ html {
     --bg-clr: #0f0f0f;
     --txt: #f0f0f0b9;
     --txt-hvr: white;
+    --crd-brdr: rgba(255, 255, 255, 0.093);
+    --crd-upr-fde: black;
+    --crd-btm-fde: #0f0f0f;
 }
 body {
     background-color: var(--bg-clr);
@@ -55,4 +61,14 @@ img, picture, video, canvas, svg {
 }
 .section {
     margin-top: 5rem;
+}
+.btn {
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: var(--txt-hvr);
+    color: var(--bg-clr);
+    font-size: var(--size-base);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;   
+    font-weight: 600;
 }

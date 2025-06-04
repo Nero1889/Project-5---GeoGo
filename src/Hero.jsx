@@ -13,9 +13,9 @@ function Hero() {
             for you! Join us on your next adventure on a corner of our beautiful planet
             Earth.</p>
             <button className="btn">Contact Us!</button>
-            <div id="a">
-                <div className="b">
-                    <div className="c">
+            <div id="card-container">
+                <div className="hero-card">
+                    <div className="icon-container">
                         <img className="bg-icon" src={slateCalendar} alt="Slate Calendar"/>
                         <img className="card-icon" src={calendar} alt="Calendar"/>
                     </div>
@@ -23,8 +23,8 @@ function Hero() {
                     <p className="card-desc">Allow us to help you plan out your vacation 
                     destination, or have you customize it as you wish!</p>
                 </div>
-                <div className="b">
-                    <div className="c">
+                <div className="hero-card">
+                    <div className="icon-container">
                         <img className="bg-icon" src={slateStar} alt="Slate Star"/>
                         <img className="card-icon" src={star} alt="Star"/>
                     </div>
@@ -32,8 +32,8 @@ function Hero() {
                     <p className="card-desc">Our top priority will ALWAYS be quality to ensure
                     patron satisfaction.</p>
                 </div>
-                <div className="b">
-                    <div className="c">
+                <div className="hero-card">
+                    <div className="icon-container">
                         <img className="bg-icon" src={slateAirplane} alt="Slate Airplane"/>
                         <img className="card-icon" src={airplane} alt="Airplane"/>
                     </div>

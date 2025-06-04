@@ -1,3 +1,6 @@
+import slateCalendar from "./assets/slateCalendar.png";
+import calendar from "./assets/calendar.png";
+
 function Hero() {
     return (
         <div className="hero">
@@ -8,22 +11,36 @@ function Hero() {
             <button className="btn">Contact Us!</button>
 
             <div id="a">
-
                 <div className="b">
-                    <h1 className="card-title"></h1>
-                    <p id="card-desc"></p>
+
+                    <div className="c">
+                        <img className="bg-icon" src={slateCalendar} alt="Slate Calendar"/>
+                        <img className="card-icon" src={calendar} alt="Calendar"/>
+                    </div>
+
+                    <h1 className="card-title">Planning</h1>
+                    <p className="card-desc">Allow us to help you plan out your vacation 
+                    destination, or have you customize it as you wish!</p>
                 </div>
 
                 <div className="b">
-                    <h1 className="card-title"></h1>
-                    <p id="card-desc"></p>
-                </div>
 
-                <div className="b">
-                    <h1 className="card-title"></h1>
-                    <p id="card-desc"></p>
+                    <div className="c"></div>
+
+                    <h1 className="card-title">Quality</h1>
+                    <p className="card-desc">Our top priority will ALWAYS be quality to ensure
+                    patron satisfaction.</p>
                 </div>
                 
+                <div className="b">
+
+                    <div className="c"></div>
+
+                    <h1 className="card-title">Arrival</h1>
+                    <p className="card-desc">Upon arrival, join alongside one of our travel 
+                    guides or freely explore your destination!</p>
+                </div>
+
             </div>
         </div>
     )

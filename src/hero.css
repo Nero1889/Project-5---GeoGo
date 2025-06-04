@@ -5,7 +5,7 @@
 }
 #hero-title {
     color: var(--txt-hvr);
-    margin-top: 3.5rem;
+    margin-top: 7.5rem;
     text-align: center;
     font-size: var(--size-4xl);
     font-weight: 550;
@@ -21,13 +21,13 @@
 .hero .btn {
     margin-top: 1.5rem;
 }
-#a {
+#card-container {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.b {
+.hero-card {
     background: linear-gradient(var(--crd-upr-fde),
     var(--crd-btm-fde));
     border: 1px solid var(--crd-brdr);
@@ -38,7 +38,7 @@
     flex-direction: column;
     align-items: center;
 }
-.c {
+.icon-container {
     background-color: #0f0f0f;
     height: 12rem;
     width: 14rem;

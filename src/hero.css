@@ -9,6 +9,7 @@
     text-align: center;
     font-size: var(--size-4xl);
     font-weight: 550;
+    width: 12.7ch;
 }
 #hero-desc {
     color: var(--txt);
@@ -20,7 +21,6 @@
 .hero .btn {
     margin-top: 1.5rem;
 }
-
 #a {
     margin-top: 2rem;
     display: flex;
@@ -31,10 +31,23 @@
     background: linear-gradient(var(--crd-upr-fde),
     var(--crd-btm-fde));
     border: 1px solid var(--crd-brdr);
-    width: 15rem;
+    width: 17rem;
     height: 20rem;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-/* .card-title {
-
-} */
+.card-title {
+    color: var(--txt-hvr);
+    font-size: var(--size-2xl);
+    text-align: center;
+}
+.card-desc {
+    color: var(--txt);
+    font-size: var(--size-sm);
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+    width: 27ch;
+}

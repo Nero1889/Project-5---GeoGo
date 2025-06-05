@@ -37,24 +37,18 @@
     overflow: hidden; 
     position: relative; 
 }
-.travel-img {
+.photo-img {
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
     object-position: center; 
     opacity: .5;
 }
-.travel-title {
+.photo-title {
     color: white;
     position: absolute;
     bottom: 1rem;
     left: 1.5rem; 
-    font-size: var(--size-lg);
+    font-size: var(--size-base);
     z-index: 1; 
-}
-#more-txt {
-    color: var(--txt);
-    text-align: center;
-    margin-top: -.7rem;
-    font-weight: 500;
 }

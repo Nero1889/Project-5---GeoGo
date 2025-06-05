@@ -42,10 +42,7 @@
 #with-container {
     margin-top: 2rem;
 }
-#with-title, #with-desc {
-    text-align: center;
-}
-#with-title {
+#with-title, .sub-with-title {
     color: var(--txt-hvr);
     font-size: var(--size-3xl);
 }
@@ -53,5 +50,21 @@
     margin-top: .5rem;
     color: var(--txt);
     font-size: var(--size-sm);
+    width: 32ch;
+    font-weight: 500;
+}
+.sub-with-title, .sub-with-desc, #with-title, #with-desc {
+    text-align: center;
+}
+.sub-with-container {
+    margin-top: 2rem;
+}
+.sub-with-title {
+    font-size: var(--size-xl);
+}
+.sub-with-desc {
+    margin-top: .5rem;
+    color: var(--txt);
+    font-size: var(--size-xs);
     width: 32ch;
 }

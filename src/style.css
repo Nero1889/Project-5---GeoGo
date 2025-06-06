@@ -12,6 +12,8 @@
     --crd-brdr: rgba(0, 0, 0, 0.096);
     --crd-upr-fde: #edecf2ca;
     --crd-btm-fde: white;
+    --phto-bg: #0f0f0f;
+    --ques-bg: #edf5ff;
 
     /* Sizes */
     --size-xss: 0.5rem;
@@ -40,6 +42,8 @@ html {
     --crd-brdr: rgba(255, 255, 255, 0.093);
     --crd-upr-fde: black;
     --crd-btm-fde: #0f0f0f;
+    --phto-bg: #141414;
+    --ques-bg: #0b0b0b;
 }
 body {
     background-color: var(--bg-clr);

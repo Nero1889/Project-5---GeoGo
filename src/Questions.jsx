@@ -35,11 +35,9 @@ function Questions() {
                                 <p className="expand">{OPEN_INDEX === i ? "-" : "+"}</p>
                                 <p className="question-desc">{item.question}</p>
                             </div>
-                            {OPEN_INDEX === i && (
-                                <div className="answer">
-                                    <p>{item.answer}</p>
-                                </div>
-                            )}
+                            <div className={`answer ${OPEN_INDEX === i ? "open" : ""}`}>
+                                <p>{item.answer}</p>
+                            </div>
                         </div>
                         {i !== FAQ_DATA.length - 1 && <div className="question-bar"></div>}
                     </div>

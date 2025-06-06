@@ -14,6 +14,7 @@
     --crd-btm-fde: white;
     --phto-bg: #0f0f0f;
     --ques-bg: #edf5ff;
+    --expnd: #d0e5ff;
 
     /* Sizes */
     --size-xss: 0.5rem;
@@ -44,6 +45,7 @@ html {
     --crd-btm-fde: #0f0f0f;
     --phto-bg: #141414;
     --ques-bg: #0b0b0b;
+    --expnd: #141414;
 }
 body {
     background-color: var(--bg-clr);

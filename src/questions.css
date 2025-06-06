@@ -16,7 +16,7 @@
     color: var(--txt);
 }
 #questions-title {
-    color: white;
+    color: var(--txt-hvr);
     font-size: var(--size-3xl);
     text-align: center;
     margin-top: .7rem;

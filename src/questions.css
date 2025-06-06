@@ -1,0 +1,22 @@
+.questions {
+    background-color: var(--ques-bg);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#questions-desc {
+    font-size: var(--size-base);
+    text-align: center;
+    font-weight: 500;
+    color: var(--txt);
+}
+#questions-title {
+    font-size: var(--size-3xl);
+    text-align: center;
+    margin-top: .7rem;
+}

@@ -37,7 +37,8 @@
     width: 90%;
     justify-content: space-between;
     margin: 14px;
-    gap: 1.5rem
+    gap: 1.5rem;
+    cursor: pointer;
 }
 .expand {
     font-weight: 500;
@@ -52,6 +53,13 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
+}
+.answer {
+    width: 30ch;
+    padding-bottom: 15px;
+    color: var(--txt);
+    font-size: var(--size-sm);
+    font-weight: 500;
 }
 .question-desc {
     font-size: var(--size-base);

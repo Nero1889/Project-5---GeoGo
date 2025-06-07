@@ -1,0 +1,27 @@
+.memories {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#memories-sub-title {
+    font-size: var(--size-xs);
+    color: #0f0f0f;
+    background-color: white;
+    border: 1px solid #b8b8b8;
+    border-radius: 50px;
+    display: inline;
+    padding: 5px;
+}
+#memories-title {
+    color: var(--txt-hvr);
+    font-size: var(--size-3xl);
+    margin-top: 1rem;
+}
+#memories-desc {
+    color: var(--txt);
+    font-size: var(--size-sm);
+    margin-top: .7rem;
+    width: 30ch;
+    text-align: center;
+}

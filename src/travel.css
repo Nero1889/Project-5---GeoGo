@@ -118,3 +118,40 @@
         margin-bottom: 3rem;
     }
 }
+
+/*  lg = (large)  */
+@media (min-width: 1024px) {
+    #travel-desc-container {
+        flex-direction: row;
+        gap: 3rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    #with-container {
+        margin-top: 2rem;
+        text-align: left;
+    }
+    #with-title, #with-desc, 
+    .sub-with-title, .sub-with-desc {
+        text-align: left;
+    }
+    #with-title {
+        margin-top: 0;
+    }
+    #with-desc {
+        font-size: var(--size-lg);
+        margin-top: 1rem;
+        width: 35ch;
+    }
+    .sub-with-desc {
+        font-size: var(--size-sm);
+        width: 32ch;
+    }
+    #sub-travel-desc-container { 
+        flex-direction: column;
+        gap: 0rem;
+    }
+    .sub-with-container {
+        height: 6.5rem;
+    }
+}

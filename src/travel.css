@@ -42,11 +42,18 @@
     margin-top: -.7rem;
     font-weight: 500;
 }
+#travel-desc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #with-container {
     margin-top: 2rem;
 }
 #with-title, .sub-with-title {
     color: var(--txt-hvr);
+}
+#with-title {
     font-size: var(--size-3xl);
 }
 #with-desc {
@@ -85,7 +92,29 @@
     .travel-title {
         font-size: var(--size-xl);
     }
+    #sub-travel-desc-container {
+        display: flex;
+        gap: 2rem;
+    }
     #more-txt {
         font-size: var(--size-lg);
     }   
+    #with-title {
+        font-size: var(--size-4xl);
+        margin-top: 3rem;
+    }   
+    #with-desc {
+        font-size: var(--size-base);
+        margin-top: .7rem;
+        width: 45ch;
+    }
+    .sub-with-container {
+        margin-top: 3.5rem;
+    }
+    .sub-with-title {
+        font-size: var(--size-2xl);
+    }
+    .sub-with-desc {
+        margin-bottom: 3rem;
+    }
 }

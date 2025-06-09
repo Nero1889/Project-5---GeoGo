@@ -22,10 +22,41 @@
     z-index: 3; 
     position: relative; 
 }
+#menu {
+    display: block;
+}
 #earth-logo {
     border: 2px dashed var(--txt-hvr);
     border-radius: 50%;
 }
+
+
+.header nav {
+    display: none;
+}
+
+
+/* Start of Desktop Navigation */
+
+#desktop-navbar {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+#desktop-navbar a {
+    color: var(--txt);
+    text-decoration: none;
+    font-size: var(--size-sm);
+    font-weight: 500;
+}
+#desktop-navbar a:hover {
+    color: var(--txt-hvr);
+}
+
+/* End of Desktop Navigation */
+
+
+
 #logo-container {
     display: flex;
     align-items: center;
@@ -151,4 +182,14 @@
 .theme-sun {
     width: var(--size-3xl);
     margin-left: 1rem;
+}
+
+/* md = (medium) */
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+    .header nav {
+        display: block;
+    }
 }

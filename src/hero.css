@@ -25,13 +25,15 @@
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
+    width: 90%;
 }
 .hero-card {
     background: linear-gradient(var(--crd-upr-fde),
     var(--crd-btm-fde));
     border: 1px solid var(--crd-brdr);
-    width: 17rem;
+    width: 100%;
     border-radius: 25px;
     padding-bottom: 1rem;
     display: flex;
@@ -72,4 +74,19 @@
 .card-icon {
     width: 7.5rem;
     z-index: 1;
+}
+
+/* sm = (small) */
+@media (min-width: 640px) {
+    #hero-title {
+        font-size: var(--size-5xl);
+        width: 17ch;
+    }
+    #hero-desc {
+        color: var(--txt);
+        margin-top: 2rem;
+        font-weight: 500;
+        width: 45ch;
+        text-align: center;
+    }
 }

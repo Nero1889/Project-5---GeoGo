@@ -38,9 +38,9 @@
 }
 .upper-card-container {
     display: flex;
-    justify-content: space-evenly;
     margin-top: 1.5rem;
     gap: 1.7rem;
+    width: 15rem;
 }
 .guest-icon {
     width: 2.5rem;
@@ -49,15 +49,23 @@
     border-radius: 50px;
     padding: 12px;
     border: 1px solid var(--crd-brdr);
+    margin-left: 1rem;
 }
 .card-title {
     color: var(--txt-hvr);
     font-size: var(--size-xl);
+    font-weight: 500;
 }
 .card-stats {
     font-size: var(--size-5xl);
     margin-top: 2rem;
     color: var(--txt-hvr);
+}
+#card1 {
+    margin-left: -1.8rem
+}
+#card2 {
+    margin-left: -2.6rem;
 }
 .card-stats span {
     font-size: var(--size-base);
@@ -65,7 +73,28 @@
 .card-desc {
     font-size: var(--size-sm);
     text-align: left;
-    width: 25ch;
+    width: 24ch;
     font-weight: 500;
     margin-top: .7rem;
+}
+
+/* sm = (small) */
+@media (min-width: 640px) {
+    .guests {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    #guests-title {
+        font-size: var(--size-4xl);
+    }
+    #guests-desc {
+        font-size: var(--size-lg);
+        margin-top: 1rem;
+        width: 36.5ch;
+    }
+    #guest-card-container {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: row;
+    }
 }

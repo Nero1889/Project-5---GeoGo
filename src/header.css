@@ -29,15 +29,9 @@
     border: 2px dashed var(--txt-hvr);
     border-radius: 50%;
 }
-
-
 .header nav {
     display: none;
 }
-
-
-/* Start of Desktop Navigation */
-
 #desktop-navbar {
     list-style: none;
     display: flex;
@@ -52,11 +46,6 @@
 #desktop-navbar a:hover {
     color: var(--txt-hvr);
 }
-
-/* End of Desktop Navigation */
-
-
-
 #logo-container {
     display: flex;
     align-items: center;
@@ -64,71 +53,6 @@
     z-index: 3;
     position: relative; 
     color: var(--txt-hvr);
-}
-.orb-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 1; 
-    overflow-x: hidden;
-}
-.orb {
-    position: relative; 
-    border-radius: 50%;
-    opacity: .5;
-    will-change: transform, opacity;
-    flex-shrink: 0;
-    margin: 0 -150px;
-    margin-top: -5rem; 
-    z-index: -1;
-}
-.orb.red {
-    background: radial-gradient(circle,
-    rgba(255, 0, 0, 0.369) 0%, rgba(255,0,0,0) 70%);
-    width: 550px;
-    height: 550px;
-    top: -100px; 
-}
-.orb.orange {
-    background: radial-gradient(circle,
-    rgba(255, 238, 0, 0.8) 0%, rgba(255,165,0,0) 70%);
-    width: 560px;
-    height: 560px;
-    top: -110px;
-}
-.orb.yellow {
-    background: radial-gradient(circle,
-    rgba(208, 255, 0, 0.8) 0%, rgba(255,255,0,0) 70%);
-    width: 540px;
-    height: 540px;
-    top: -90px;
-}
-.orb.green {
-    background: radial-gradient(circle,
-    rgba(0, 210, 115, 0.8) 0%, rgba(0,128,0,0) 70%);
-    width: 570px;
-    height: 570px;
-    top: -120px;
-}
-.orb.blue {
-    background: radial-gradient(circle,
-    rgba(0, 166, 255, 0.8) 0%, rgba(0,0,255,0) 70%);
-    width: 555px;
-    height: 555px;
-    top: -105px;
-}
-.orb.purple {
-    background: radial-gradient(circle,
-    rgba(128, 0, 128, 0.313) 0%, rgba(255, 0, 255, 0) 70%);
-    width: 565px;
-    height: 565px;
-    top: -115px;
 }
 .mobile-menu {
     position: fixed; 

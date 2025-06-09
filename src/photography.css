@@ -25,6 +25,7 @@
 #photo-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -43,12 +44,44 @@
     object-fit: cover; 
     object-position: center; 
     opacity: .5;
+    z-index: 1;
 }
 .photo-title {
     color: white;
     position: absolute;
     bottom: 1rem;
     left: 1.5rem; 
-    font-size: var(--size-base);
+    font-size: var(--size-sm);
     z-index: 1; 
+}
+
+/* sm = (small) */
+@media (min-width: 640px) {
+    .photography {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #photo-title {
+        font-size: var(--size-4xl);
+        width: 17.5ch;
+    }
+    #photo-desc {
+        font-size: var(--size-lg);
+        width: 35ch;
+        margin-top: 1.5rem;
+    }
+    #photo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2.5rem;
+        width: 90%;
+    }
+    .photo-preview {
+        width: 100%;
+    }
+    .photo-title {
+        font-size: var(--size-lg);
+    }
 }

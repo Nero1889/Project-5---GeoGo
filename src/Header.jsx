@@ -8,29 +8,29 @@ import sun from "./assets/sun.png";
 
 function Header() {
     const [IS_MENU_OPEN, setIsMenuOpen] = useState(false);
-    const [LIGHT_MODE, setLightMode] = useState(() => {
+    const [DARK_MODE, setDarkMode] = useState(() => {
         const STORED_THEME = localStorage.getItem("theme");
         return STORED_THEME === "light"; 
     });
 
     const TOGGLE_MENU = () => setIsMenuOpen(!IS_MENU_OPEN);
-    const TOGGLE_THEME = () => setLightMode(prevMode => !prevMode); 
+    const TOGGLE_THEME = () => setDarkMode(prevMode => !prevMode); 
     
     useEffect(() => {
-        if (LIGHT_MODE) {
-            document.body.classList.add("light-mode");
+        if (DARK_MODE) {
+            document.body.classList.add("dark-mode");
             localStorage.setItem("theme", "light"); 
         } else {
-            document.body.classList.remove("light-mode");
+            document.body.classList.remove("dark-mode");
             localStorage.setItem("theme", "dark"); 
         }
-    }, [LIGHT_MODE]);
+    }, [DARK_MODE]);
 
     const MENU_ICON_SRC = () => {
         if (IS_MENU_OPEN) {
-            return LIGHT_MODE ? lightClose : close;
+            return DARK_MODE ? lightClose : close;
         } else {
-            return LIGHT_MODE ? lightMenu : menu;
+            return DARK_MODE ? lightMenu : menu;
         }
     };
 
@@ -54,22 +54,33 @@ function Header() {
                     <img id="menu" src={MENU_ICON_SRC()}
                     alt={IS_MENU_OPEN ? "Close menu" : "Open menu"} draggable="false"
                     onClick={TOGGLE_MENU}/>
+                    <nav>
+                        <ul id="desktop-navbar">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#faq">FaQ</a></li>
+                            <li><a href="#misc">Misc</a></li>
+                            <img className="theme-sun" src={sun} alt="Toggle Theme Sun"
+                            onClick={TOGGLE_THEME} draggable="false"/>
+                        </ul>
+                    </nav>
                 </div>
             </header>
 
             <div className={`mobile-menu ${IS_MENU_OPEN ? "open" : ""}`}>
-                <ul>
-                    {/* Remove Later */}
-                    <li><a href="#home" onClick={() => alert("You clicked on: Home!")}>Home</a></li>
-                    <li><a href="#gallery" onClick={() => alert("You clicked on: Gallery!")}>Gallery</a></li>
-                    <li><a href="#faq" onClick={() => alert("You clicked on: FaQ!")}>FaQ</a></li>
-                    <li><a href="#misc" onClick={() => alert("You clicked on: Misc!")}>Misc</a></li>
-                    <div id="mobile-menu-bar"></div>
-                    <img className="theme-sun" src={sun} alt="Toggle Theme Sun" onClick={TOGGLE_THEME}/>
-                </ul>
+                <nav>
+                    <ul>
+                        <li><a href="#home" onClick={() => alert("You clicked on: Home!")}>Home</a></li>
+                        <li><a href="#gallery" onClick={() => alert("You clicked on: Gallery!")}>Gallery</a></li>
+                        <li><a href="#faq" onClick={() => alert("You clicked on: FaQ!")}>FaQ</a></li>
+                        <li><a href="#misc" onClick={() => alert("You clicked on: Misc!")}>Misc</a></li>
+                        <div id="mobile-menu-bar"></div>
+                        <img className="theme-sun" src={sun} alt="Toggle Theme Sun" onClick={TOGGLE_THEME}/>
+                    </ul>
+                </nav>
             </div>
         </>
-    )
+    );
 }
 
 export default Header;

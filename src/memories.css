@@ -16,7 +16,7 @@
 #memories-title {
     color: var(--txt-hvr);
     font-size: var(--size-3xl);
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 #memories-desc {
     color: var(--txt);
@@ -24,4 +24,23 @@
     margin-top: .7rem;
     width: 30ch;
     text-align: center;
+    font-weight: 500;
+}
+.memories .btn {
+    margin-top: 2rem;
+}
+
+/* sm = (small) */
+@media (min-width: 640px) {
+    #memories-sub-title {
+        font-size: var(--size-sm);
+    }
+    #memories-title {
+        font-size: var(--size-4xl);
+    }
+    #memories-desc {
+        font-size: var(--size-base);
+        margin-top: 1rem;
+        width: 38ch;
+    }
 }

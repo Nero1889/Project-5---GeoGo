@@ -20,5 +20,18 @@
     background-color: white;
     padding: 5px;
     border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.096);
+    border: 2px solid rgba(0, 0, 0, 0.096);
+}
+
+/* xl = (extra large) */ 
+@media (min-width: 1280px) {
+    .footer {
+        margin-top: 4rem;
+    }
+    #footer-title {
+        font-size: var(--size-base);
+    }
+    #footer-container {
+        margin-bottom: 3rem;
+    }
 }

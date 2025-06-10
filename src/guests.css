@@ -5,6 +5,11 @@
     justify-content: center;
     flex-direction: column;
 }
+#guests-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #guests-title {
     font-size: var(--size-3xl);
     color: var(--txt-hvr);
@@ -96,5 +101,40 @@
         margin-top: 2.5rem;
         display: flex;
         flex-direction: row;
+    }
+}
+
+/* xl = (extra large) */ 
+@media (min-width: 1280px) {
+    .guests {
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+    }
+    #guest-card-container {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: row;
+    }
+    #guests-container {
+        align-items: start;
+    }
+    #guests-title, #guests-desc {
+        text-align: left;
+    }
+}
+
+/* 2xl = (two extra large) */ 
+@media (min-width: 1536px) {
+    .guests {
+        gap: 5rem;
+    }
+    #guests-title {
+        font-size: var(--size-5xl);
+    }
+    #guests-desc {
+        font-size: var(--size-xl);
+        margin-top: 1.5rem;
     }
 }

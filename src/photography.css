@@ -85,3 +85,17 @@
         font-size: var(--size-lg);
     }
 }
+
+/* lg = (large) */
+@media (min-width: 1024px) {
+    .photo-preview {
+        height: 12rem;
+    }
+}
+
+/* 2xl = (two extra large) */ 
+@media (min-width: 1536px) {
+    .photo-preview {
+        height: 14rem;
+    }
+}

@@ -44,3 +44,19 @@
         width: 38ch;
     }
 }
+
+/* xl = (extra large) */ 
+@media (min-width: 1280px) {
+    #memories-sub-title {
+        font-size: var(--size-base);
+    }
+    #memories-title {
+        font-size: var(--size-5xl);
+    }
+    #memories-desc {
+        font-size: var(--size-lg);
+        margin-top: 1.5rem;
+        width: 45ch;
+        margin-bottom: 2rem;
+    }
+}

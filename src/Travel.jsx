@@ -1,6 +1,9 @@
 import california from "./assets/losAngeles.png";
 import japan from "./assets/japan.png";
 import spain from "./assets/madrid.jpg";
+import morocco from "./assets/Morocco.png";
+import brazil from "./assets/Brazil.png";
+import thailand from "./assets/thailand.png";
 
 function Travel() {
     return (
@@ -17,6 +20,47 @@ function Travel() {
                 <div className="travel-card">
                     <img className="travel-img" src={spain} alt="Spain"/>
                     <p className="travel-title">Spain</p>
+                </div>
+                <div className="travel-card">
+                    <img className="travel-img" src={morocco} alt="Morocco"/>
+                    <p className="travel-title">Morocco</p>
+                </div>
+                <div className="travel-card">
+                    <img className="travel-img" src={brazil} alt="Brazil"/>
+                    <p className="travel-title">Brazil</p>
+                </div>
+
+                <div className="bento-grid">
+                    <div className="bento-box box1">
+                        <img className="travel-img" src={brazil} alt="Brazil"/>
+                        <p className="bento-travel-title">Brazil</p>
+                    </div>
+
+                    <div className="bento-box box2">
+                        <img className="travel-img" src={thailand} alt="Thailand"/>
+                        <p className="bento-travel-title">Thailand</p>
+                    </div>
+
+                    <div className="bento-box box3">
+                        <img className="travel-img" src={california} alt="California"/>
+                        <p className="bento-travel-title">California</p>
+                    </div>
+
+                    <div className="bento-box box4">
+                        <img className="travel-img" src={japan} alt="Japan"/>
+                        <p className="bento-travel-title">Japan</p>
+                    </div>
+
+                    <div className="bento-box box5">
+                        <img className="travel-img" src={spain} alt="Spain"/>
+                        <p className="bento-travel-title">Spain</p>
+                    </div>
+
+                    <div className="bento-box box6">
+                        <img className="travel-img" src={morocco} alt="Morocco"/>
+                        <p className="bento-travel-title">Morocco</p>
+                    </div>
+
                 </div>
                 <p id="more-txt">and more...</p>
             </div>

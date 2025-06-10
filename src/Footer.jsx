@@ -9,14 +9,13 @@ function Footer() {
                 <a href="https://github.com/Nero1889" target="_blank" title="GitHub">
                     <img className="logo" src={GitHub} alt="Slate GitHub Logo"/>
                 </a>
-
                 <a href="https://www.linkedin.com/in/raul-luna-249325329/"
                 target="_blank" title="LinkedIn">
                     <img className="logo" src={LinkedIn} alt="Slate LinkedIn Logo"/>
                 </a>
             </div>
         </footer>
-    )
+    );
 }
 
 export default Footer;

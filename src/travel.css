@@ -2,14 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 2.5rem;
 }
 #travel-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1.5rem;
     width: 90%;
+    /* border: 2px dashed red; */
 }
 .travel-card {
     width: 17rem;
@@ -26,8 +29,14 @@
     object-fit: cover; 
     object-position: center; 
     opacity: .5;
+    border-radius: 25px;
 }
-.travel-title {
+.bento-box {
+    display: flex;
+    overflow: hidden; 
+    position: relative; 
+}
+.travel-title,.bento-travel-title {
     color: white;
     position: absolute;
     bottom: 1rem;
@@ -81,6 +90,50 @@
     font-weight: 500;
 }
 
+
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 100px;
+    gap: 2rem;
+    width: 90%;
+    /* border: 2px dashed orange; */
+    margin-left: 15rem;
+}
+.bento-box {
+    background-color: black;
+    border-radius: 25px;
+    /* border: 2px dashed yellow; */
+}
+.box1 {
+    grid-column: span 1;
+    grid-row: span 4;
+}
+.box2 {
+    grid-column: span 1;
+    grid-row: span 4;
+}
+.box3 {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.box4 {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.box5 {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.box6 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.bento-grid {
+    display: none;
+}
+
 /* sm = (small) */
 @media (min-width: 640px) {
     #travel-container {
@@ -121,6 +174,9 @@
 
 /*  lg = (large)  */
 @media (min-width: 1024px) {
+    .travel {
+        margin-top: 4rem;
+    }
     #travel-desc-container {
         flex-direction: row;
         gap: 3rem;
@@ -153,5 +209,39 @@
     }
     .sub-with-container {
         height: 6.5rem;
+    }
+}
+
+/* xl = (extra large)  */
+@media (min-width: 1280px) {
+    #travel-desc-container {
+        gap: 5rem;
+    }
+    .travel-card, .travel-title {
+        display: none;
+    }
+    .bento-grid {
+        display: grid;
+    }
+}
+
+/* 2xl = (two extra large)  */
+@media (min-width: 1536px) {
+    #travel-desc-container {
+        gap: 10rem;
+    }
+    #with-title {
+        font-size: var(--size-5xl);
+    } 
+    #with-desc {
+        font-size: var(--size-xl);
+        margin-top: 1.5rem;
+    }
+    .sub-with-title {
+        font-size: var(--size-3xl);
+    }
+    .sub-with-desc {
+        font-size: var(--size-base);
+        margin-top: 1rem;
     }
 }

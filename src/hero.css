@@ -20,21 +20,22 @@
     transparent 1px);
     background-size: 50px 50px; 
     mask-image: linear-gradient(
-        to bottom,
-        transparent, 
-        black 10%,    
-        black 90%,    
+        to bottom, transparent, 
+        black 10%, black 90%,    
         transparent  
     ),
     linear-gradient(
-        to right,
-        transparent,
-        black 10%,
-        black 90%,
+        to right, transparent,
+        black 10%, black 90%,
         transparent
     );
     mask-composite: intersect;
     -webkit-mask-composite: intersect;
+}
+#hero-title, #hero-desc, .hero .btn {
+    animation: slideUpFadeIn 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
 }
 #hero-title {
     color: var(--txt-hvr);
@@ -43,6 +44,7 @@
     font-size: var(--size-4xl);
     font-weight: 550;
     width: 12.7ch;
+    animation-delay: 0.2s; 
 }
 #hero-desc {
     color: var(--txt);
@@ -51,9 +53,11 @@
     font-weight: 500;
     width: 30ch;
     text-align: center;
+    animation-delay: 0.4s;
 }
 .hero .btn {
     margin-top: 1.5rem;
+    animation-delay: 0.6s; 
 }
 #card-container {
     margin-top: 2rem;

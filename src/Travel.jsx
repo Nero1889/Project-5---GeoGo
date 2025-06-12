@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import california from "./assets/losAngeles.png";
 import japan from "./assets/japan.png";
 import spain from "./assets/madrid.jpg";
@@ -34,16 +34,47 @@ function BentoBox({image, name, boxClass}) {
 }
 
 function Travel() {
+    const IMG_REFS = useRef([]);
+
+    useEffect(() => {
+        const OBSERVER = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in");
+                        OBSERVER.unobserve(entry.target);
+                    }
+                });
+            },
+            {threshold: 0.1}
+        );
+        IMG_REFS.current.forEach((img) => {
+            if (img) OBSERVER.observe(img);
+        });
+
+        return () => OBSERVER.disconnect();
+    }, []);
+
     return (
         <div className="travel">
             <div id="travel-container">
-                {DESTINATIONS.slice(0, 5).map((dest) => (
-                    <TravelCard key={dest.name} image={dest.image} name={dest.name}/>
+                {DESTINATIONS.slice(0, 5).map((dest, i) => (
+                    <div key={dest.name} className="travel-card" 
+                    ref={(el) => (IMG_REFS.current[i] = el)} 
+                    style={{transitionDelay: `${i * 150}ms`}}>
+                        <img className="travel-img" src={dest.image} alt={dest.name}/>
+                        <p className="travel-title">{dest.name}</p>
+                    </div>
                 ))}
                 <div className="bento-grid">
                     {DESTINATIONS.map((dest, index) => (
-                        <BentoBox key={`bento-${dest.name}`} image={dest.image}
-                        name={dest.name} boxClass={`box${index + 1}`}/>
+                        <div key={`bento-${dest.name}`} 
+                        className={`bento-box box${index + 1}`}
+                        ref={(el) => (IMG_REFS.current[DESTINATIONS.length + index] = el)}
+                        style={{ transitionDelay: `${(DESTINATIONS.length + index) * 10}ms`}}>
+                            <img className="travel-img" src={dest.image} alt={dest.name}/>
+                            <p className="bento-travel-title">{dest.name}</p>
+                        </div>
                     ))}
                 </div>
                 <p id="more-txt">and more...</p>

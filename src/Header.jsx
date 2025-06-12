@@ -3,7 +3,7 @@ import menu from "./assets/drk-menu.png";
 import close from "./assets/close.png";
 import lightMenu from "./assets/lightMenu.png";
 import lightClose from "./assets/lightClose.png";
-import earth from "./assets/Earth.png";
+import geoGoLogo from "./assets/GeoGoLogo.png";
 import sun from "./assets/sun.png";
 
 function Header() {
@@ -44,8 +44,8 @@ function Header() {
             <header className="header">
                 <div id="navbar-container">
                     <div id="logo-container">
-                        <img id="earth-logo" src={earth} alt="Earth"/>
-                        <h3>GeoGo</h3>
+                        <img id="earth-logo" src={geoGoLogo} alt="Earth"/>
+                        <h3 id="geogo-logo">GeoGo</h3>
                     </div>
                     <img id="menu" src={MENU_ICON_SRC()}
                     alt={IS_MENU_OPEN ? "Close menu" : "Open menu"} draggable="false"

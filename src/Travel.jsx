@@ -34,7 +34,7 @@ function BentoBox({image, name, boxClass}) {
 }
 
 function Travel() {
-    const IMG_REFS = useRef([]);
+    const OBSERVED_ELEMENTS_REFS = useRef([]);
 
     useEffect(() => {
         const OBSERVER = new IntersectionObserver(
@@ -48,19 +48,25 @@ function Travel() {
             },
             {threshold: 0.1}
         );
-        IMG_REFS.current.forEach((img) => {
-            if (img) OBSERVER.observe(img);
+        OBSERVED_ELEMENTS_REFS.current.forEach((el) => {
+            if (el) OBSERVER.observe(el);
         });
 
         return () => OBSERVER.disconnect();
     }, []);
 
+    const setRef = (el) => {
+        if (el && !OBSERVED_ELEMENTS_REFS.current.includes(el)) {
+            OBSERVED_ELEMENTS_REFS.current.push(el);
+        }
+    };
+
     return (
         <div className="travel">
             <div id="travel-container">
                 {DESTINATIONS.slice(0, 5).map((dest, i) => (
-                    <div key={dest.name} className="travel-card" 
-                    ref={(el) => (IMG_REFS.current[i] = el)} 
+                    <div key={dest.name} className="travel-card"
+                    ref={setRef} 
                     style={{transitionDelay: `${i * 150}ms`}}>
                         <img className="travel-img" src={dest.image} alt={dest.name}/>
                         <p className="travel-title">{dest.name}</p>
@@ -68,9 +74,9 @@ function Travel() {
                 ))}
                 <div className="bento-grid">
                     {DESTINATIONS.map((dest, index) => (
-                        <div key={`bento-${dest.name}`} 
+                        <div key={`bento-${dest.name}`}
                         className={`bento-box box${index + 1}`}
-                        ref={(el) => (IMG_REFS.current[DESTINATIONS.length + index] = el)}
+                        ref={setRef} 
                         style={{ transitionDelay: `${(DESTINATIONS.length + index) * 10}ms`}}>
                             <img className="travel-img" src={dest.image} alt={dest.name}/>
                             <p className="bento-travel-title">{dest.name}</p>
@@ -81,22 +87,23 @@ function Travel() {
             </div>
             <div id="travel-desc-container">
                 <div id="with-container">
-                    <h1 id="with-title">Travel With Us!</h1>
-                    <p id="with-desc">Thinking of a destination you'd like to make 
-                    memories in? If you'd like to explore the world then let us help
-                    you!</p>
+                    <h1 id="with-title" ref={setRef}>Travel With Us!</h1>
+                    <p id="with-desc" ref={setRef}>Thinking of a destination you'd like
+                    to make memories in? If you'd like to explore the world then let us
+                    help you!</p>
                 </div>
                 <div id="sub-travel-desc-container">
                     <div className="sub-with-container">
-                        <h1 className="sub-with-title">Starting Your Journey</h1>
-                        <p className="sub-with-desc">Let us know about your desired 
-                        journey, and leave the rest to us! We'll make your adventure a 
-                        reality!</p>
+                        <h1 className="sub-with-title" 
+                        ref={setRef}>Starting Your Journey</h1>
+                        <p className="sub-with-desc" ref={setRef}>Let us know about your 
+                        desired journey, and leave the rest to us! We'll make your 
+                        adventure a reality!</p>
                     </div>
                     <div className="sub-with-container">
-                        <h1 className="sub-with-title">Destination</h1>
-                        <p className="sub-with-desc">After the planning is complete and
-                        full pre-planned, enjoy your destination!</p>
+                        <h1 className="sub-with-title" ref={setRef}>Destination</h1>
+                        <p className="sub-with-desc" ref={setRef}>After the planning is 
+                        complete and full pre-planned, enjoy your destination!</p>
                     </div>
                 </div>
             </div>

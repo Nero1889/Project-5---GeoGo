@@ -16,6 +16,11 @@ function Header() {
     const TOGGLE_MENU = () => setIsMenuOpen(!IS_MENU_OPEN);
     const TOGGLE_THEME = () => setDarkMode(prevMode => !prevMode);
 
+    const TOGGLE_THEME_AND_CLOSE_MENU = () => {
+        TOGGLE_THEME();
+        setIsMenuOpen(false);
+    };
+
     useEffect(() => {
         if (DARK_MODE) {
             document.body.classList.add("dark-mode");
@@ -66,8 +71,8 @@ function Header() {
                         <li onClick={TOGGLE_MENU}><a href="#faq">FaQ</a></li>
                         <li onClick={TOGGLE_MENU}><a href="#misc">Misc</a></li>
                         <div id="mobile-menu-bar"></div>
-                        <img className="theme-sun" src={sun} alt="Toggle Theme Sun" 
-                        onClick={TOGGLE_THEME}/>
+                        <img className="theme-sun" src={sun} alt="Toggle Theme Sun"
+                        onClick={TOGGLE_THEME_AND_CLOSE_MENU} draggable="false"/>
                     </ul>
                 </nav>
             </div>

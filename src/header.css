@@ -22,6 +22,8 @@
     z-index: 3; 
     position: relative; 
 }
+#geogo-logo {
+}
 #menu {
     display: block;
 }

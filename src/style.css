@@ -9,6 +9,7 @@
     --bg-clr: white;
     --txt: #475569;
     --txt-hvr: black;
+    --grid: rgba(0, 0, 0, 0.116);
     --crd-brdr: rgba(0, 0, 0, 0.096);
     --crd-upr-fde: #edecf2ca;
     --crd-btm-fde: white;
@@ -40,6 +41,7 @@ html {
     --bg-clr: #0f0f0f;
     --txt: #f0f0f0b9;
     --txt-hvr: white;
+    --grid: rgba(255, 255, 255, 0.091);
     --crd-brdr: rgba(255, 255, 255, 0.093);
     --crd-upr-fde: black;
     --crd-btm-fde: #0f0f0f;
@@ -90,6 +92,16 @@ img, picture, video, canvas, svg {
     from {
         opacity: 0;
         transform: translateY(-50px); 
+    } to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px); 
     } to {
         opacity: 1;
         transform: translateY(0); 

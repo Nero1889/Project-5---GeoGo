@@ -4,7 +4,7 @@ import japan from "./assets/japan.png";
 import spain from "./assets/madrid.jpg";
 import morocco from "./assets/Morocco.png";
 import brazil from "./assets/Brazil.png";
-import thailand from "./assets/thailand.png";
+import thailand from "./assets/Thailand.png";
 
 const DESTINATIONS = [
     {name: "California", image: california},

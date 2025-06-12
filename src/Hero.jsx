@@ -1,4 +1,4 @@
-\import {useEffect, useRef} from "react";
+import {useEffect, useRef} from "react";
 import slateCalendar from "./assets/slateCalendar.png";
 import calendar from "./assets/calendar.png";
 import slateStar from "./assets/slateStar.png";
@@ -30,6 +30,7 @@ function Hero() {
 
     return (
         <div id="home" className="hero">
+            <div id="bg-grid"></div>
             <div id="hero-title">Embark on Your Next Journey Today!</div>
             <p id="hero-desc">Explore our stunning gallery of pictures and opportunities
             for you! Join us on your next adventure on a corner of our beautiful planet
